@@ -14,7 +14,7 @@ function Login() {
             <img className='bottomBanner' src='/images/cta-logo-two.png' alt="Disney Contents"></img>
         </div>
     </div>
-  )c
+  )
 }
 
 
