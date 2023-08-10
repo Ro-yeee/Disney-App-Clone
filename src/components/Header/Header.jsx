@@ -1,14 +1,22 @@
 import { auth, provider } from '../../FirebaseConfig'
+import { signIn } from '../../features/user'
 import './Header.css'
+import { useDispatch ,useSelector } from 'react-redux'
 
-function Header({user, setLogin}) {
+
+function Header() {
+
+    const dispatch = useDispatch()
+    const user = useSelector((state) => state.user)
 
     const handleLogin = () =>{
         auth.signInWithPopup(provider)
             .then(result => {
                const {user} = result 
-               setLogin(user)
-               console.log(user)
+               const name =  user.displayName 
+               const email = user.email
+               const photo = user.photoURL
+               dispatch(signIn({name,email,photo}))
             })
             .catch(error => console.log(error))
     }
