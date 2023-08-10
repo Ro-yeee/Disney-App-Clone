@@ -80,7 +80,23 @@ span::before{
     color: black;
 }
 
-@media (max-width:768px){
+.userImage{
+    width: 50px;
+    border-radius: 50%;
+    transition: 300ms ease-in-out;
+}
+
+.userImage:hover{
+    transform: scale(1.1);
+}
+
+@media (max-width:500px){
+    .userImage{
+        width: 40px;
+    }
+}
+
+@media (max-width:780px){
     .navMenu{
         display: none;
     }
