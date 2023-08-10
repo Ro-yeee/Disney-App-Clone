@@ -1,6 +1,14 @@
+import { auth, provider } from '../../FirebaseConfig'
 import './Header.css'
 
 function Header() {
+
+    const handleLogin = () =>{
+        auth.signInWithPopup(provider)
+            .then(result => console.log(result))
+            .catch(error => console.log(error))
+    }
+
   return (
     <nav>
         <a href='/'>
@@ -32,9 +40,9 @@ function Header() {
                 <span>TV</span>
             </a>
         </div>
-        <a className='loginBtn' href='/'>
+        <button className='loginBtn' onClick={handleLogin}>
             LOGIN
-        </a>
+        </button>
     </nav>
   )
 }
