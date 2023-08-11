@@ -20,7 +20,7 @@ function Header() {
             const email = user.email
             const photo = user.photoURL
             dispatch(signIn({name,email,photo}))
-            navigate('#/home')
+            navigate('/home')
         }
      })
     },[user])
@@ -47,7 +47,7 @@ function Header() {
             auth.signOut()
                 .then(()=>{
                     dispatch(signOut())
-                    navigate('#/')
+                    navigate('/')
                 })
                 .catch(error =>{
                     console.log(error)
