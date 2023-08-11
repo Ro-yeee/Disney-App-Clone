@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { auth, provider } from '../../FirebaseConfig'
-import { signIn } from '../../features/user'
+import { signIn, signOut } from '../../features/user'
 import './Header.css'
 import { useDispatch ,useSelector } from 'react-redux'
 import { Link, useNavigate } from 'react-router-dom'
@@ -20,7 +20,7 @@ function Header() {
             const email = user.email
             const photo = user.photoURL
             dispatch(signIn({name,email,photo}))
-            navigate('/home')
+            navigate('#/home')
         }
      })
     },[user])
@@ -31,15 +31,28 @@ function Header() {
     } 
 
     const handleLogin = () =>{
-        auth.signInWithPopup(provider)
-            .then(result => {
-               const {user} = result 
-               const name =  user.displayName 
-               const email = user.email
-               const photo = user.photoURL
-               dispatch(signIn({name,email,photo}))
-            })
-            .catch(error => console.log(error))
+        if(!user.name){
+            auth.signInWithPopup(provider)
+                .then(result => {
+                const {user} = result 
+                const name =  user.displayName 
+                const email = user.email
+                const photo = user.photoURL
+                dispatch(signIn({name,email,photo}))
+                })
+                .catch(error => 
+                    console.log(error
+                ))
+        }else if(user.name){
+            auth.signOut()
+                .then(()=>{
+                    dispatch(signOut())
+                    navigate('#/')
+                })
+                .catch(error =>{
+                    console.log(error)
+                })
+        }
     }
 
   return (
@@ -80,7 +93,10 @@ function Header() {
                     <span>TV</span>
                 </a>
             </div>
-            <img className='userImage'  src={user.photo}/>
+            <div className='profile'>
+                <img className='userImage'  src={user.photo}/>
+                <button className='signOutBtn' onClick={handleLogin}>SIGN OUT</button>
+            </div>
             </>
         }
     </nav>
