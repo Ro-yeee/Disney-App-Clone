@@ -64,6 +64,10 @@ span::before{
     transform: scaleX(1);
 }
 
+.links:hover >img{
+    filter: invert(29%) sepia(100%) saturate(464%) hue-rotate(359deg) brightness(103%) contrast(106%);
+}
+
 .loginBtn{
     padding: 0.5rem 1rem;
     border: 1px solid #f9f9f9;

@@ -1,0 +1,51 @@
+
+.slider{
+    margin-top: 40px;
+}
+
+.slider > button{
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+}
+.slider > button:hover{
+    opacity: 1;
+    transition: 300ms ease-in-out;
+}
+
+.wrapper{
+    padding: 0.2rem;
+    cursor: pointer;
+}
+
+.bannerLink{
+    border-radius: 4px;
+    text-decoration: none;
+    box-shadow: rgba(0 0 0 / 69%) 0px 26px 30px -10px, rgba(0 0 0 / 73%) 0px 16px 10px -10px;
+    display: block;
+    padding: 4px;
+}
+
+.bannerLink:hover{
+    padding: 0;
+    border: 4px solid white;
+    transition: 300ms ease-in;
+}
+
+.bannerLink > img{
+    width: 100%;
+}
+
+.slider >ul > li > button::before{
+    font-size: 10px;
+    color: rgb(150, 158, 171);
+}
+
+li.slick-active > button::before{
+    color: white !important;
+
+}
+
+.slick-list{
+    overflow: initial !important;
+}

@@ -8,4 +8,5 @@
     top: 80px;
     min-height: 100vh;
     padding: 1rem 2rem;
+    overflow-x: hidden;
 }
