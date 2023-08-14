@@ -1,4 +1,5 @@
 import BannerSLider from '../BannerSlider/BannerSLider'
+import MovieCards from '../MovieCards/MovieCards'
 import StudioCards from '../StudioCards/StudioCards'
 import './HomePage.css'
 
@@ -7,6 +8,7 @@ function HomePage() {
     <div className="HomePage">
         <BannerSLider/>
         <StudioCards/>
+        <MovieCards/>
     </div>
   )
 }

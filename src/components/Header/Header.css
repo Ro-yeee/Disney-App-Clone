@@ -97,7 +97,7 @@ span::before{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     position: relative;
     width: 100px;
     height: 100%;
