@@ -5,17 +5,17 @@ import './index.css'
 import { configureStore } from '@reduxjs/toolkit'
 import { Provider } from 'react-redux'
 import userReducer from './features/user.jsx'
+import movieReducer from "./features/movie.jsx"
 
 const store = configureStore({
   reducer: {
-    user: userReducer
+    user: userReducer,
+    movie: movieReducer
   }
 })
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
     <Provider store={store}>
       <App />
     </Provider>
-  </React.StrictMode>,
 )
