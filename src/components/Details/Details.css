@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap');
+
+.detailContainer{
+    width: 100%;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.4);
+    margin-top: 80px;
+    height: 100vh;
+}
+
+.movieBackground{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.detailContentBox{
+    padding: 0rem 1rem;
+    padding-top: 8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+}
+
+.movieTitle{
+    font-family: 'Tilt Prism', cursive;
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+    max-width: 500px;
+}
+
+.controls{
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.PlayBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    font-size: 20px;
+    letter-spacing: 1.8px;
+    border: none;
+    background: rgb(249,249,249);
+    color: black;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 100ms ease-in-out;
+}
+
+.PlayBtn:hover{
+    background: rgb(198,198,198);
+}
+
+.TrailerBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    font-size: 20px;
+    letter-spacing: 1.8px;
+    border: none;
+    background: rgba(0,0,0,0.3);
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid white;
+    transition: 100ms ease-in-out;
+}
+
+.TrailerBtn:hover{
+    background: rgba(0, 0, 0, 0.7)
+}
+
+.AddBtn{
+    width: 75px;
+    border: 2px solid white;
+    padding: 20px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.6);
+    cursor: pointer;
+    transition: 100ms ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.AddBtn>img{
+    width: 60%;
+}
+
+.groupWatchBtn{
+    width: 75px;
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.6);
+    cursor: pointer;
+    transition: 100ms ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.AddBtn:hover, .groupWatchBtn:hover{
+    background: rgba(0,0,0,0.8);
+}
+
+.movieOverview{
+    flex: 2;
+    margin-top: 20px;
+    line-height: 1.5;
+    font-size: 24px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    padding: 1rem;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    justify-self: flex-end;
+    word-spacing: 2px;
+}
+
+@media(max-width:550px){
+    .detailContainer{
+        width: 100%;
+        position: relative;
+        background-color: rgba(6, 3, 33, 0.4);
+        height: 100%;
+    }
+    .movieBackground{
+        height: 100%;
+        position: static;
+        object-fit: scale-down;
+        z-index: -1;
+    }
+    .detailContentBox{
+        padding-top: 1rem;
+    }
+    .movieTitle{
+        font-size: 30px;
+    }
+    .controls{
+        margin-top: 0px;
+    }
+    .PlayBtn{
+        padding: 0.9rem;
+        height: 45px;
+        font-size: 10px;
+        letter-spacing: 1.8px;
+    }
+    .PlayBtn>img{
+        width: 20px;
+    }
+    .TrailerBtn{
+        padding: 0.9rem;
+        height: 45px;
+        font-size: 10px;
+        letter-spacing: 1.8px;
+    }
+    .TrailerBtn>img{
+        width: 20px;
+    }
+    .AddBtn{
+        width: 45px;
+        border: 2px solid white;
+        padding: 10px;
+        border-radius: 50%;
+       
+    }
+    .groupWatchBtn{
+        width: 45px;
+        border: 2px solid white;
+        padding: 10px;
+        border-radius: 50%;
+        height: 45px
+    }
+    .movieOverview{
+        font-size: 18px;
+        padding-top: 0;
+        margin-top: 0;
+        word-spacing: 1px;
+    }
+
+}

@@ -3,6 +3,7 @@ import Header from './components/Header/Header'
 import LoginPage from './components/LoginPage/LoginPage'
 import HomePage from './components/HomePage/HomePage'
 import PrivateRoutes from './PrivateRoutes'
+import Details from './components/Details/Details'
 
 function App() {
 
@@ -14,7 +15,7 @@ function App() {
           <Route path='/login' element={<LoginPage/>} />
           <Route element={<PrivateRoutes/>} >
               <Route path='/' element={<HomePage/>} />
-              <Route path='/details/:id' />
+              <Route path='/details/:id' element={<Details/>} />
           </Route>
         </Routes>
       </Router>
