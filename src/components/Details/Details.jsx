@@ -1,12 +1,43 @@
+import { useParams } from "react-router-dom"
 import "./Details.css"
+import { useEffect, useState } from "react"
+import { useSelector } from "react-redux"
 
 function Details() {
+
+    const {id,type} =useParams()
+    let data 
+    const movie = useSelector(state =>state.movie)
+    const [detail,setDetail] = useState({})
+
+    useEffect(()=>{
+        switch(type){
+            case "recommended" : 
+                    data =movie.recommended.filter(each => each.id === id)
+                    setDetail(data[0])
+                    break
+            case "horror" : 
+                    data =movie.horror.filter(each => each.id === id)
+                    setDetail(data[0])
+                    break
+            case "action" : 
+                    data =movie.actionMov.filter(each => each.id === id)
+                    setDetail(data[0])
+                    break
+            case "upcoming" : 
+                    data =movie.upcoming.filter(each => each.id === id)
+                    setDetail(data[0])
+                    break
+        }
+    },[])
+    
+    
   return (
     <div className="detailContainer">
-        <img className="movieBackground" src="https://image.tmdb.org/t/p/original/4HodYYKEIsGOdinkGi2Ucz6X9i0.jpg" alt="" />
+        <img className="movieBackground" src={`https://image.tmdb.org/t/p/original/${detail.background}`} alt={detail.title} />
         <div className="detailContentBox">
             <h2 className="movieTitle">
-                Spider-Man: Across the Spider-Verse
+                 {detail.title}
             </h2>
             <div className="bottomSec">
                 <div className="controls">
@@ -26,7 +57,7 @@ function Details() {
                     </button>
                 </div>
                 <p className="movieOverview">
-                After reuniting with Gwen Stacy, Brooklyn’s full-time, friendly neighborhood Spider-Man is catapulted across the Multiverse, where he encounters the Spider Society, a team of Spider-People charged with protecting the Multiverse’s very existence. But when the heroes clash on how to handle a new threat, Miles finds himself pitted against the other Spiders and must set out on his own to save those he loves most.
+                    {detail.description}
                 </p>
             </div>
         </div>

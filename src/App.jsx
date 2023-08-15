@@ -15,7 +15,7 @@ function App() {
           <Route path='/login' element={<LoginPage/>} />
           <Route element={<PrivateRoutes/>} >
               <Route path='/' element={<HomePage/>} />
-              <Route path='/details/:id' element={<Details/>} />
+              <Route path='/details/:type/:id' element={<Details/>} />
           </Route>
         </Routes>
       </Router>

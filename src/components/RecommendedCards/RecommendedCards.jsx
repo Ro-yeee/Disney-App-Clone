@@ -12,7 +12,7 @@ function RecommendedCards() {
         <div className="MovieList">
             {
                 movies.recommended.map(movie=>(
-                    <Link key={movie.id} className="linkk" to={`/details/${movie.id}`} style={{textDecoration:"none",display:"flex",justifyContent:"center"}}>
+                    <Link key={movie.id} className="linkk" to={`/details/${movie.type}/${movie.id}`} style={{textDecoration:"none",display:"flex",justifyContent:"center"}}>
                         <div key={movie.id} className="MovieCard">
                             <img src={`https://image.tmdb.org/t/p/original${movie.poster}`} alt="" />
                         </div>

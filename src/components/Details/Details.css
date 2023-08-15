@@ -12,7 +12,7 @@
     position: absolute;
     inset: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     object-fit: cover;
     z-index: -1;
 }
@@ -24,10 +24,10 @@
     flex-direction: column;
     gap: 20px;
     height: 100%;
-    justify-content: space-between;
 }
 
 .movieTitle{
+    margin-top: 160px;
     font-family: 'Tilt Prism', cursive;
     color: rgb(255, 255, 255);
     font-size: 50px;
@@ -38,6 +38,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    height: 100%;
 }
 
 .controls{
@@ -133,7 +134,7 @@
     .detailContainer{
         width: 100%;
         position: relative;
-        background-color: rgba(6, 3, 33, 0.4);
+        background-color: transparent;
         height: 100%;
     }
     .movieBackground{
@@ -146,6 +147,7 @@
         padding-top: 1rem;
     }
     .movieTitle{
+        margin-top: 0px;
         font-size: 30px;
     }
     .PlayBtn{
@@ -184,6 +186,7 @@
         font-size: 18px;
         padding-top: 0;
         word-spacing: 1px;
+        background: none;
     }
 
 }
