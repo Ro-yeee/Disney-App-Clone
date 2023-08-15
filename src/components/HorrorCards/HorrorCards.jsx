@@ -11,9 +11,9 @@ function HorrorCards() {
         <div className="MovieList">
             {
                 movies.horror.map(movie=>(
-                    <Link to={`/detail/${movie.id}`} style={{textDecoration:"none",display:"flex",justifyContent:"center"}}>
+                    <Link key={movie.id} to={`/details/${movie.id}`} style={{textDecoration:"none",display:"flex",justifyContent:"center"}}>
                         <div key={movie.id} className="MovieCard">
-                            <img src={`https://image.tmdb.org/t/p/original${movie.poster}`} alt="" />
+                            <img src={`https://image.tmdb.org/t/p/original${movie.poster}`} alt={`${movie.title}`} />
                         </div>
                     </Link>
                 ))

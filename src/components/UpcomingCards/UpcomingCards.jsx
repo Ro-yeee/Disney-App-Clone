@@ -11,7 +11,7 @@ function UpcomingCards() {
         <div className="MovieList">
             {
                 movies.upcoming.map(movie=>(
-                    <Link to={`/detail/${movie.id}`} style={{textDecoration:"none",display:"flex",justifyContent:"center"}}>
+                    <Link key={movie.id} to={`/details/${movie.id}`} style={{textDecoration:"none",display:"flex",justifyContent:"center"}}>
                         <div key={movie.id} className="MovieCard">
                             <img src={`https://image.tmdb.org/t/p/original${movie.poster}`} alt="" />
                         </div>

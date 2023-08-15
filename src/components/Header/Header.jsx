@@ -20,7 +20,7 @@ function Header() {
             const email = user.email
             const photo = user.photoURL
             dispatch(signIn({name,email,photo}))
-            navigate('/home')
+            navigate('/')
         }
      })
     },[user])
@@ -47,7 +47,6 @@ function Header() {
             auth.signOut()
                 .then(()=>{
                     dispatch(signOut())
-                    navigate('/')
                 })
                 .catch(error =>{
                     console.log(error)
@@ -68,7 +67,7 @@ function Header() {
             :
             <>
             <div className='navMenu'>
-                <Link className='links' to="/home">
+                <Link className='links' to="/">
                     <img src="/images/home-icon.svg" alt="HOME" />
                     <span>HOME</span>
                 </Link>

@@ -1,7 +1,7 @@
 import './LoginPage.css'
 
 
-function Login() {
+function LoginPage() {
   return (
     <div className="container">
         <div className='content'>
@@ -18,4 +18,4 @@ function Login() {
 }
 
 
-export default Login
+export default LoginPage
