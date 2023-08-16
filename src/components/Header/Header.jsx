@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect} from 'react'
 import { auth, provider } from '../../FirebaseConfig'
 import { signIn, signOut } from '../../features/user'
 import './Header.css'
@@ -24,11 +24,6 @@ function Header() {
         }
      })
     },[user])
-
-    const setUser = (user) =>{
-        
-        
-    } 
 
     const handleLogin = () =>{
         if(!user.name){
