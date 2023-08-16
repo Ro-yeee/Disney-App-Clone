@@ -71,23 +71,23 @@ function Header() {
                     <img src="/images/home-icon.svg" alt="HOME" />
                     <span>HOME</span>
                 </Link>
-                <Link className='links' to="/">
+                <Link className='links' to="/search">
                     <img src="/images/search-icon.svg" alt="SEARCH" />
                     <span>SEARCH</span>
                 </Link>
-                <Link className='links' href="/">
+                <Link className='links' to="/watchlist">
                     <img src="/images/watchlist-icon.svg" alt="WATCHLIST" />
                     <span>WATCHLIST</span>
                 </Link>
-                <Link className='links' href="/">
+                <Link className='links' to="/originals">
                     <img src="/images/original-icon.svg" alt="ORIGINALS" />
                     <span>ORIGINALS</span>
                 </Link>
-                <Link className='links' href="/">
+                <Link className='links'to="/movies">
                     <img src="/images/movie-icon.svg" alt="MOVIES" />
                     <span>MOVIES</span>
                 </Link>
-                <Link className='links' href="/">
+                <Link className='links' to="/tv">
                     <img src="/images/tv-icon.svg" alt="TV" />
                     <span>TV</span>
                 </Link>
