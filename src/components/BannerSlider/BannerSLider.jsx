@@ -2,6 +2,7 @@ import './BannerSlider.css'
 import Slider from 'react-slick'
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
+import { Link } from 'react-router-dom'
 
 
 function BannerSLider() {
@@ -17,26 +18,30 @@ function BannerSLider() {
   return (
     <Slider className='slider' {...settings}>
         <div className='wrapper'>
-            <a className='bannerLink'>
+            <Link className='bannerLink'>
                 <img src="/images/spiderman.jpeg" alt="" />
-            </a>
+            </Link>
         </div>
         <div className='wrapper'>
-            <a className='bannerLink'>
+            <Link className='bannerLink'>
                 <img src="/images/open.webp" alt="" />
-            </a>
+            </Link>
         </div>
         <div className='wrapper'>
-            <a className='bannerLink'>
-                <img src="/images/spiderman.jpeg" alt="" />
-            </a>
+            <Link className='bannerLink'>
+                <img src="/images/avengers.webp" alt="" />
+            </Link>
         </div>
         <div className='wrapper'>
-            <a className='bannerLink'>
-                <img src="/images/open.webp" alt="" />
-            </a>
+            <Link className='bannerLink'>
+                <img src="/images/star.jpeg" alt="" />
+            </Link>
         </div>
-       
+        <div className='wrapper'>
+            <Link className='bannerLink'>
+                <img src="/images/wick.jpeg" alt="" />
+            </Link>
+        </div>
     </Slider>
   )
 }

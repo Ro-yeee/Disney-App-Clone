@@ -75,22 +75,22 @@ function Header() {
                     <img src="/images/search-icon.svg" alt="SEARCH" />
                     <span>SEARCH</span>
                 </Link>
-                <a className='links' href="/">
+                <Link className='links' href="/">
                     <img src="/images/watchlist-icon.svg" alt="WATCHLIST" />
                     <span>WATCHLIST</span>
-                </a>
-                <a className='links' href="/">
+                </Link>
+                <Link className='links' href="/">
                     <img src="/images/original-icon.svg" alt="ORIGINALS" />
                     <span>ORIGINALS</span>
-                </a>
-                <a className='links' href="/">
+                </Link>
+                <Link className='links' href="/">
                     <img src="/images/movie-icon.svg" alt="MOVIES" />
                     <span>MOVIES</span>
-                </a>
-                <a className='links' href="/">
+                </Link>
+                <Link className='links' href="/">
                     <img src="/images/tv-icon.svg" alt="TV" />
                     <span>TV</span>
-                </a>
+                </Link>
             </div>
             <div className='profile'>
                 <img className='userImage'  src={user.photo}/>
