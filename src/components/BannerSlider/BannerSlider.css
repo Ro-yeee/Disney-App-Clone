@@ -48,3 +48,14 @@ li.slick-active > button::before{
 .slick-list{
     overflow: initial !important;
 }
+
+.slick-prev{
+    position: absolute;
+    left: auto;
+}
+
+@media (max-width:980px){
+    .slider{
+        margin-top: 0;
+    }
+}

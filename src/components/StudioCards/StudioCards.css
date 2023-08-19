@@ -43,12 +43,25 @@
     opacity: 1;
 }
 
-@media (max-width:768px) {
+.hotstar:hover > img{
+    opacity: 0;
+}
+
+
+
+@media (max-width:980px) {
     .StudioCards{
-        flex-direction: column;
-        gap: 60px;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
     }
     .StudioCard{
         max-width: 500px;
+    }
+}
+
+@media (max-width:550px){
+    .StudioCards{
+        grid-template-columns: repeat(2,1fr);
+        margin-top: 36px;
     }
 }
