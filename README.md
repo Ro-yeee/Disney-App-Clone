@@ -1,5 +1,5 @@
 <h2>Click below to visit the website 👇</h2>
-<a href ="https://disney-app-clone-3c601.firebaseapp.com"><em>Disney-App</em></a>
+<a href ="https://disney-app-clone-tawny.vercel.app/"><em>Disney-App</em></a>
 
 
 # React + Vite
